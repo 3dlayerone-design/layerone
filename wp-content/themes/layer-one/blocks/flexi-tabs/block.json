@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/flexi-tabs",
+	"title": "Collectibles: section tabs",
+	"category": "layer-one",
+	"icon": "menu",
+	"description": "The sticky bar of links to the sections of the Collectibles page, with the live count of figures in your box.",
+	"keywords": ["flexi", "collectibles", "tabs", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"links": {
+			"type": "array",
+			"default": [
+				{ "label": "Most loved", "anchor": "loved" },
+				{ "label": "Bundles", "anchor": "bundles" },
+				{ "label": "All {figures}", "anchor": "all" },
+				{ "label": "Build a box", "anchor": "box" }
+			]
+		}
+	},
+	"supports": { "html": false, "align": false, "multiple": false },
+	"editorScript": "file:./editor.js",
+	"viewScript": "layerone-flexi-app",
+	"style": [ "layerone-flexi", "layerone-flexi2" ],
+	"render": "file:./render.php"
+}

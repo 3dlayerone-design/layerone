@@ -1,0 +1,14 @@
+.lo-tiles-editor{border:1px solid #dcdcde;border-radius:8px;padding:16px;background:#f6f7f7;display:grid;gap:14px}
+.lo-tile-title{display:flex;gap:10px;align-items:center}
+.lo-tile-title small{display:block;color:#50575e}
+.lo-tile-box,.lo-tile-card{background:#fff;border:1px solid #dcdcde;border-radius:6px;padding:14px;display:grid;gap:10px}
+.lo-tile-head{display:flex;justify-content:space-between;align-items:center}
+.lo-tile-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.lo-tile-row.two{grid-template-columns:1fr 1fr}
+.lo-tile-body{display:grid;grid-template-columns:140px 1fr;gap:16px}
+.lo-tile-img{display:grid;gap:8px;align-content:start}
+.lo-tile-img img,.lo-tile-noimg{width:140px;height:140px;object-fit:cover;border-radius:8px;background:#f0f0f1}
+.lo-tile-noimg{display:grid;place-items:center;color:#757575;font-size:12px}
+.lo-tile-fields{display:grid;gap:10px}
+.lo-tile-box .components-base-control,.lo-tile-card .components-base-control{margin:0}
+.lo-door-remove,.lo-tile-remove{margin-top:14px;padding-top:12px;border-top:1px solid #dcdcde}

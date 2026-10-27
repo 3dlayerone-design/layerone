@@ -1,0 +1,23 @@
+/* Accordion panels inside the Layer One blocks (editor canvas only). */
+.wp-block[data-type^="layerone/"] .components-panel__body{
+  background:#fff;
+  border:1px solid #dcdcde;
+  border-radius:6px;
+  margin:0 0 10px;
+  padding:0;
+  display:block;
+}
+.wp-block[data-type^="layerone/"] .components-panel__body.is-opened{padding:0 16px 16px}
+.wp-block[data-type^="layerone/"] .components-panel__body-title{margin:0 -16px;padding:0}
+.wp-block[data-type^="layerone/"] .components-panel__body:not(.is-opened) .components-panel__body-title{margin:0}
+.wp-block[data-type^="layerone/"] .components-panel__body-toggle.components-button{padding:14px 16px;font-weight:700}
+.wp-block[data-type^="layerone/"] .components-panel__body.is-opened>*:not(.components-panel__body-title){margin-top:12px}
+
+/* panels nested inside a list wrapper: no double borders */
+.wp-block[data-type^="layerone/"] .components-panel__body .components-panel__body{margin:0;border-radius:0;border-width:1px 0 0}
+.wp-block[data-type^="layerone/"] .components-panel__body .components-panel__body:first-child{border-top:0}
+
+/* the old card/box wrappers now live inside the panels */
+.lo-hero-slide,.lo-door-card,.lo-tile-card,.lo-door-box,.lo-tile-box{display:block!important;background:#fff}
+.lo-hero-slide-head,.lo-door-head,.lo-tile-head{justify-content:flex-end}
+.lo-hero-slide-head strong,.lo-door-head strong,.lo-tile-head strong{display:none}

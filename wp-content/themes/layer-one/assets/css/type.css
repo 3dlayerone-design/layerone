@@ -1,0 +1,37 @@
+/* one type scale for the whole site: page title / section heading / card title / small title */
+:root{--t-h1:clamp(24px,2.6vw,34px);--t-h2:clamp(24px,2.6vw,34px);--t-h3:clamp(17px,1.5vw,20px);--t-h4:16px}
+
+/* 1 - page titles */
+h1,.l2-intro h1,.cx-hero h1,.cx-top h1,.lp-head h1,.pg-head h1,.pd-info h1,.acc-head h1,.auth-card h1,.simple-h{font-size:var(--t-h1)!important}
+
+/* 2 - section headings */
+h2,.sh h2,.l2-sh h2,.cx-sh h2,.v2-shead h2,.pd-faq-head h2,.l2-fx h2,.deal h2,.pack h2,.news h2,.fx-bv-head h2,.v2-bcopy h2,.l2-spot-copy h2,.cx-end h2,.auth-side h2,.v2-qv-info h3,.cp-empty h2,.co-done h2{font-size:var(--t-h2)!important}
+
+/* 3 - card / feature titles */
+h3,.promo h3,.ln h3,.dt h3,.door-txt h2,.l2-bh h3,.figc h3,.fx-binfo h3,.v2-binfo h3,.cx-path-t h2,.cx-bform h3,.cx-qform h3,.cx-diy h3,.cx-sample h3,.forme h3,.card h2,.lg-body h2,.fx-ghead h3,.v2-sghead h3,.cx-fgroup h3{font-size:var(--t-h3)!important}
+
+/* 4 - small panel / list titles */
+.pinfo h3,.ad-card h3,.acc-card h2,.sum h2,.cos h2,.lf-top h2,.hub-card h2,.ch h3,.cp-item h3,.perk h3,.cc h3,.lg-body h3,.cx-expect h3,.fx-steps h3,.acc-empty h3,.lp-empty h3,.fq-cta h2{font-size:var(--t-h4)!important}
+.lg-toc h2,.fq-group h2{font-size:12px!important}
+.cos h2 b{font-size:13px!important}
+
+/* titles and section headings look identical everywhere (incl. the italic part of the hero line) */
+h1,.l2-intro h1,.cx-hero h1,.cx-top h1,.lp-head h1,.pg-head h1,.pd-info h1,.acc-head h1,.auth-card h1,.simple-h,.sh h2,.l2-sh h2,.cx-sh h2,.v2-shead h2,.pd-faq-head h2,.l2-fx h2,.deal h2,.pack h2,.news h2,.fx-bv-head h2,.v2-bcopy h2,.l2-spot-copy h2,.cx-end h2,.auth-side h2{font-weight:800!important;letter-spacing:-.04em!important;line-height:1.1!important}
+h1 .serif,h2 .serif,h1 em,h2 em{font-size:1em!important}
+
+/* the italic accent word(s) in every heading use the brand green */
+html.green h1 .serif,html.green h2 .serif{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:currentColor;color:var(--g-deep,#0a4d43)!important}
+
+/* product page: the title sits in a slim side panel, so it is sized to fit it */
+.pd-info h1{font-size:clamp(20px,1.7vw,24px)!important;font-weight:700!important;letter-spacing:-.02em!important;line-height:1.25!important}
+.pd-pricerow .pd-price{font-size:20px}
+.pd-lead{font-size:13.5px}
+
+/* pop-up dialogs: card-sized title */
+dialog h2{font-size:clamp(20px,1.8vw,24px)!important;letter-spacing:-.03em!important}
+
+/* custom / corporate FAQ group labels stay small */
+.cx-fgroup h3{font-size:12px!important}
+
+/* on the dark green panels the italic accent stays light so it can be read */
+html.green .l2-fx h2 .serif,html.green .news h2 .serif,html.green .pack h2 .serif,html.green .deal h2 .serif,html.green .ft h2 .serif{color:#a8e0cf!important;-webkit-text-fill-color:#a8e0cf}

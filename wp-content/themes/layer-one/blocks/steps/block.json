@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/steps",
+	"title": "How it's made",
+	"category": "layer-one",
+	"icon": "list-view",
+	"description": "Heading and a row of numbered steps, each with a photo.",
+	"keywords": ["steps", "process", "how", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"kicker": { "type": "string", "default": "How it's made" },
+		"heading": { "type": "string", "default": "From our farm" },
+		"headingAccent": { "type": "string", "default": "to your door" },
+		"steps": { "type": "array", "default": [] }
+	},
+	"supports": { "html": false, "align": false },
+	"editorScript": "file:./editor.js",
+	"style": "layerone-landing2",
+	"render": "file:./render.php"
+}

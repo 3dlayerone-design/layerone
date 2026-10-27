@@ -1,0 +1,62 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/custom",
+	"title": "Custom & corporate",
+	"category": "layer-one",
+	"icon": "id-alt",
+	"description": "Photo showcase, corporate gifting card, custom figurine card and personal orders row.",
+	"keywords": ["custom", "corporate", "figurine", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"kicker": { "type": "string", "default": "Custom & Corporate" },
+		"heading": { "type": "string", "default": "From your photo" },
+		"headingAccent": { "type": "string", "default": "or your logo" },
+		"linkLabel": { "type": "string", "default": "See all custom options →" },
+		"linkUrl": { "type": "string", "default": "" },
+		"showcase": { "type": "array", "default": [] },
+		"deal": {
+			"type": "object",
+			"default": {
+				"kicker": "Custom & Corporate",
+				"title": "Calendars, desk plates\nand gifts with your logo",
+				"text": "Logo calendars, desk plates, pen holders and gifting sets for offices and events. You approve a free preview before we print.",
+				"stats": [ { "value": "₹499", "label": "From / piece" }, { "value": "5", "label": "Min. order" }, { "value": "GST", "label": "Invoice" } ],
+				"steps": [ { "text": "1 · Send logo & names" }, { "text": "2 · Approve preview" }, { "text": "3 · We print & ship" } ],
+				"ctaLabel": "Get a quote on WhatsApp",
+				"waMessage": "Hi LayerOne, I would like a quote for custom corporate gifts with our logo.",
+				"moreLabel": "See products & prices →",
+				"moreUrl": "",
+				"images": []
+			}
+		},
+		"figc": {
+			"type": "object",
+			"default": {
+				"imageId": 0,
+				"badge": "New",
+				"kicker": "Custom figurines",
+				"title": "A mini you, made from one photo",
+				"text": "Upload a clear photo of yourself, your partner, family or pet and add it to your cart. We send a free design preview, you approve it, then we print and hand-finish your figurine.",
+				"tags": [ { "text": "Singles" }, { "text": "Couples" }, { "text": "Families" }, { "text": "Pets" } ],
+				"steps": [ { "text": "Upload your photo" }, { "text": "Approve the free preview" }, { "text": "We print & ship" } ],
+				"btnLabel": "Build your figurine",
+				"btnUrl": ""
+			}
+		},
+		"forme": {
+			"type": "object",
+			"default": {
+				"title": "Personal custom orders",
+				"text": "Name signs, door plaques, cake toppers and party return gifts.",
+				"items": [ { "label": "Name signs & door plaques", "price": "from ₹799" }, { "label": "Cake toppers", "price": "from ₹499" }, { "label": "Return gifts, keychains ×25", "price": "from ₹1,500" } ],
+				"btnLabel": "Start a custom order",
+				"btnUrl": ""
+			}
+		}
+	},
+	"supports": { "html": false, "align": false },
+	"editorScript": "file:./editor.js",
+	"style": "layerone-landing2",
+	"render": "file:./render.php"
+}

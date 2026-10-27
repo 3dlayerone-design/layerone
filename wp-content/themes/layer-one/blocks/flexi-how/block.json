@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/flexi-how",
+	"title": "Collectibles: how it works",
+	"category": "layer-one",
+	"icon": "editor-ol",
+	"description": "A short numbered row of how ordering works.",
+	"keywords": ["flexi", "collectibles", "steps", "how", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"steps": {
+			"type": "array",
+			"default": [
+				{ "title": "Choose your figures.", "text": "Single picks, whole bundles or a mystery fill." },
+				{ "title": "We print to order.", "text": "PLA, checked by hand in our NCR print farm." },
+				{ "title": "Dispatched in 3–5 days.", "text": "Shipped across India, COD available." }
+			]
+		}
+	},
+	"supports": { "html": false, "align": false },
+	"editorScript": "file:./editor.js",
+	"style": [ "layerone-flexi", "layerone-flexi2" ],
+	"render": "file:./render.php"
+}

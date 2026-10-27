@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/flexi-hero",
+	"title": "Collectibles: hero",
+	"category": "layer-one",
+	"icon": "cover-image",
+	"description": "Collectibles page hero: heading, buttons and a wall of moving figures. Figures come from your products.",
+	"keywords": ["flexi", "collectibles", "hero", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"badge": { "type": "string", "default": "New" },
+		"eyebrow": { "type": "string", "default": "{figures} figures in {bundles} bundles" },
+		"heading": { "type": "string", "default": "Meet the" },
+		"headingAccent": { "type": "string", "default": "Flexi Crew." },
+		"intro": { "type": "string", "default": "Poseable 3D-printed Zookis that wiggle, bend and stand on your desk. Fill a box of 6 to 48 with your favourites and we print it to order in NCR." },
+		"fromText": { "type": "string", "default": "From <b>{price}</b> a figure in a box of {n}" },
+		"btn1": { "type": "string", "default": "Browse all {figures}" },
+		"btn2": { "type": "string", "default": "See the bundles" },
+		"wallTag": { "type": "string", "default": "flexi-wall" },
+		"wallProducts": { "type": "array", "default": [] }
+	},
+	"supports": { "html": false, "align": false, "multiple": false },
+	"editorScript": "file:./editor.js",
+	"viewScript": "layerone-flexi-app",
+	"style": [ "layerone-flexi", "layerone-flexi2" ],
+	"render": "file:./render.php"
+}

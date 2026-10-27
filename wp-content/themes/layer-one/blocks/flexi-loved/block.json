@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/flexi-loved",
+	"title": "Collectibles: most loved",
+	"category": "layer-one",
+	"icon": "heart",
+	"description": "A sliding shelf of favourite figures. Figures come from a product tag or are picked by hand.",
+	"keywords": ["flexi", "collectibles", "loved", "shelf", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"title": { "type": "string", "default": "Most" },
+		"accent": { "type": "string", "default": "loved" },
+		"text": { "type": "string", "default": "The figures that wiggle best. Tap one to see it up close." },
+		"tag": { "type": "string", "default": "most-loved" },
+		"products": { "type": "array", "default": [] }
+	},
+	"supports": { "html": false, "align": false, "multiple": false },
+	"editorScript": "file:./editor.js",
+	"viewScript": "layerone-flexi-app",
+	"style": [ "layerone-flexi", "layerone-flexi2" ],
+	"render": "file:./render.php"
+}

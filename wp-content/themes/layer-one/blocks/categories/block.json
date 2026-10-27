@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/categories",
+	"title": "Category tiles",
+	"category": "layer-one",
+	"icon": "grid-view",
+	"description": "Heading with a link and a grid of photo tiles. Each tile links to a WooCommerce product category and shows its lowest price.",
+	"keywords": ["categories", "tiles", "grid", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"kicker": { "type": "string", "default": "Home & Desk" },
+		"heading": { "type": "string", "default": "Made for your desk" },
+		"headingAccent": { "type": "string", "default": "and walls" },
+		"linkLabel": { "type": "string", "default": "Shop all home & desk →" },
+		"linkUrl": { "type": "string", "default": "" },
+		"tiles": { "type": "array", "default": [] }
+	},
+	"supports": { "html": false, "align": false },
+	"editorScript": "file:./editor.js",
+	"editorStyle": "file:./editor.css",
+	"style": "layerone-landing2",
+	"render": "file:./render.php"
+}

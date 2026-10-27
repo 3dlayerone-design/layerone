@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/flexi",
+	"title": "Flexi Crew band",
+	"category": "layer-one",
+	"icon": "images-alt2",
+	"description": "Dark green band: heading, stats, two rows of moving figures and a slider of bundles. Figures and bundles come from your products.",
+	"keywords": ["flexi", "crew", "figures", "bundles", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"kicker": { "type": "string", "default": "The Flexi Crew" },
+		"heading": { "type": "string", "default": "{figures} tiny friends that" },
+		"headingAccent": { "type": "string", "default": "bend, wiggle and pose." },
+		"text": { "type": "string", "default": "Print-in-place joints, no assembly. Collect a bundle of 12 or build your own box of 6 to 48." },
+		"stats": {
+			"type": "array",
+			"default": [
+				{ "value": "{figures}", "label": "figures" },
+				{ "value": "{series}", "label": "series" },
+				{ "value": "{bundles}", "label": "bundles" },
+				{ "value": "{price}", "label": "a figure in a box of {n}" }
+			]
+		},
+		"btn1Label": { "type": "string", "default": "Meet the crew" },
+		"btn1Url": { "type": "string", "default": "" },
+		"btn2Label": { "type": "string", "default": "Build a box" },
+		"btn2Url": { "type": "string", "default": "" },
+		"wallTag": { "type": "string", "default": "flexi-band" },
+		"wallProducts": { "type": "array", "default": [] },
+		"wallLimit": { "type": "number", "default": 0 },
+		"bundlesTitle": { "type": "string", "default": "Pick a bundle" },
+		"bundlesSub": { "type": "string", "default": "12 figures each" },
+		"bundleProducts": { "type": "array", "default": [] }
+	},
+	"supports": { "html": false, "align": false },
+	"editorScript": "file:./editor.js",
+	"viewScript": "file:./view.js",
+	"style": "layerone-landing2",
+	"render": "file:./render.php"
+}

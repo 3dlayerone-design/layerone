@@ -1,0 +1,413 @@
+/* LayerOne – WHITE theme with a DEEP GREEN accent (#0a4d43, hover #002b2c). Backgrounds stay neutral; green is only used for buttons, links, tags and the footer. */
+
+html.green{
+  --bg:#ffffff; --card:#f6f7f7; --ink:#0b2323; --muted:#5a7370; --line:#dfe4e4; --soft:#3d5956;
+  --brand:#0a4d43; --brand2:#1f7a6d; --dark:#0b2323;
+  --olive:#0a4d43; --olive-l:#1f7a6d; --olive-m:#ebeded; --mint:#0a4d43;
+  --g-deep:#0a4d43; --g-hover:#002b2c; --g-soft:#f2f3f3; --g-edge:#d3d9d9;
+  --sh:0 1px 2px rgba(11,35,35,.06),0 14px 34px -14px rgba(11,35,35,.2);
+  color-scheme:light;
+}
+html.green body{background:var(--bg);color:var(--ink)}
+html.green ::selection{background:#e8ebeb;color:#0b2323}
+
+/* ---------- buttons ---------- */
+html.green .btn-dark,html.green .tool.cartb,html.green .search button,html.green .chip.b button,html.green .pack .btn,html.green .deal .btn,html.green .vw,html.green .dt.photo .vw,html.green .dt.dark .vw{background:var(--mint);color:#fff}
+html.green .btn-dark:hover,html.green .tool.cartb:hover,html.green .search button:hover,html.green .chip.b button:hover,html.green .pack .btn:hover,html.green .deal .btn:hover,html.green .dt:hover .vw,html.green .dt.dark:hover .vw{background:var(--g-hover);color:#fff;box-shadow:0 12px 28px -12px rgba(10,77,67,.55)}
+html.green .vw i,html.green .dt.photo .vw i,html.green .dt.dark .vw i{background:#fff;color:var(--mint)}
+html.green .btn-line{border-color:var(--mint);color:var(--mint);background:transparent}
+html.green .btn-line:hover{background:var(--mint);color:#fff}
+html.green .deal .btn,html.green .pack .btn{background:var(--mint);color:#fff}
+
+/* ---------- top bar, header, nav ---------- */
+html.green .ann{background:var(--olive);color:#eef0f0}
+html.green .ann b,html.green .ann a{color:#fff}
+html.green .header{background:rgba(255,255,255,.9);border-bottom-color:var(--line)}
+html.green .nav{border-top-color:var(--line)}
+html.green .nav a{color:var(--soft)}
+html.green .nav a:hover,html.green .tool:hover{background:var(--g-soft);color:var(--ink)}
+html.green .nav a.hot,html.green .drawer a.hot{color:var(--mint)}
+html.green .nav .r{color:var(--muted)}
+html.green .logo em,html.green .ft-brand .logo em{background:linear-gradient(120deg,var(--g-deep),var(--brand2));-webkit-background-clip:text;background-clip:text}
+html.green .tool .n,html.green .tabbar .n{background:var(--olive);color:#fff}
+html.green .search{background:#fff;border-color:var(--line)}
+html.green .search input{color:var(--ink)}
+html.green .search input::placeholder{color:#92a7a4}
+html.green .search:focus-within{border-color:var(--mint);box-shadow:0 0 0 4px rgba(10,77,67,.12)}
+
+/* ---------- hero ---------- */
+html.green .main{background:radial-gradient(circle at 78% 30%,rgba(31,122,109,.08) 0,rgba(31,122,109,0) 46%),linear-gradient(135deg,#f5f6f6 0%,#eaeded 58%,#ffffff 100%)}
+html.green .main::before{background-image:radial-gradient(rgba(10,77,67,.06) 1.2px,transparent 1.4px)}
+html.green .eyebrow{background:#fff;border-color:var(--line);color:var(--ink)}
+html.green .eyebrow i{background:var(--olive);color:#fff}
+html.green h1 .serif{background:linear-gradient(120deg,var(--g-deep),var(--brand2));-webkit-background-clip:text;background-clip:text}
+html.green .sub{color:var(--soft)}
+html.green .disc{background:radial-gradient(circle at 35% 28%,rgba(255,255,255,.95),rgba(255,255,255,.55) 52%,rgba(255,255,255,0) 72%);border-color:rgba(10,77,67,.18);box-shadow:inset 0 0 60px rgba(255,255,255,.7),0 50px 90px -30px rgba(10,77,67,.35)}
+html.green .orbit{border-color:rgba(10,77,67,.28)}
+html.green .orbit.o2{border-color:rgba(10,77,67,.16)}
+html.green .orbit::after{background:var(--brand2);box-shadow:0 0 20px var(--brand2)}
+html.green .orbit.o2::after{background:var(--olive);box-shadow:0 0 20px var(--olive)}
+html.green .gs{background:radial-gradient(ellipse,rgba(11,35,35,.3),transparent 70%)}
+html.green .himg{border-color:#fff}
+html.green .chip{background:rgba(255,255,255,.92);border-color:var(--line);color:var(--ink);box-shadow:var(--sh)}
+html.green .chip.a .i{color:var(--mint)}
+html.green .pick{background:rgba(255,255,255,.9);border-color:var(--line)}
+html.green .pick button{background:var(--g-soft)}
+html.green .pick button.on{border-color:var(--mint);box-shadow:0 10px 18px -8px rgba(10,77,67,.4)}
+html.green .sp{color:var(--brand2)}
+
+/* ---------- trust bar, lines, section heads ---------- */
+html.green .trust{background:#fff;border-color:var(--line)}
+html.green .tb{border-color:var(--line)}
+html.green .tb .ic{background:var(--olive-m);color:var(--mint)}
+html.green .tb span{color:var(--muted)}
+html.green .sh p{color:var(--muted)}
+html.green .sh .more{border-color:var(--mint);color:var(--mint)}
+html.green .ln{border:1px solid var(--line);color:var(--ink)}
+html.green .l1{background:linear-gradient(160deg,#eaecec,#f8f9f9)}
+html.green .l2{background:linear-gradient(160deg,#eef0f0,#fafafa)}
+html.green .l3{background:linear-gradient(160deg,#e7eaea,#f5f6f6)}
+html.green .ln small{color:var(--mint)}
+html.green .ln p{color:var(--soft)}
+html.green .ln .lnk{color:var(--mint)}
+
+/* ---------- product cards ---------- */
+html.green .tabs{background:var(--g-soft)}
+html.green .tabs button{color:var(--soft)}
+html.green .tabs button.on{background:var(--mint);color:#fff;box-shadow:none}
+html.green .pimg{background:var(--card)}
+html.green .tag{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(11,35,35,.12)}
+html.green .tag.sale{background:var(--olive);color:#fff}
+html.green .tag.new{background:var(--g-deep);color:#fff}
+html.green .heart{background:rgba(255,255,255,.94);color:var(--ink);box-shadow:0 2px 8px rgba(11,35,35,.14)}
+html.green .heart.on{color:var(--mint)}
+html.green .quick{background:rgba(10,77,67,.94);color:#fff}
+html.green .quick:hover{background:var(--mint);color:#fff}
+html.green .price s{color:#7a918d}
+html.green .fm span{background:#edefef;color:var(--soft)}
+html.green .meta{color:var(--muted)}
+html.green .ph{border-color:rgba(10,77,67,.25);background:repeating-linear-gradient(0deg,rgba(10,77,67,.05) 0 3px,transparent 3px 7px)}
+html.green .ph span{color:rgba(11,35,35,.45)}
+html.green .pinfo h3 a:hover,html.green .cp-item h3 a:hover{color:var(--mint)}
+
+/* ---------- flexi pack builder ---------- */
+html.green .pack{background:linear-gradient(135deg,#ebeeee,#f8f9f9);border:1px solid var(--line);color:var(--ink)}
+html.green .pack h2{color:var(--ink)}
+html.green .pack .k{color:var(--mint)}
+html.green .pack p{color:var(--soft)}
+html.green .tiers button{background:#fff;color:var(--ink);border-color:var(--line)}
+html.green .tiers button small{color:var(--muted)}
+html.green .tiers button.on{border-color:var(--mint);box-shadow:0 10px 20px -12px rgba(10,77,67,.45)}
+html.green .pack .cd div,html.green .deal .cd div{background:#fff;border:1px solid var(--line);color:var(--ink)}
+html.green .pack .cd span,html.green .deal .cd span,html.green .pack .nd>span{color:var(--muted)}
+html.green .pack .im .ph{background-color:#fff}
+html.green .pack .im img{border:4px solid #fff;box-shadow:0 20px 40px -20px rgba(11,35,35,.4)}
+
+/* ---------- corporate / custom ---------- */
+html.green .deal{background:linear-gradient(135deg,#f0f1f1,#f9f9f9);border:1px solid var(--line);color:var(--ink)}
+html.green .deal h2{color:var(--ink)}
+html.green .deal::before{background:radial-gradient(circle,rgba(31,122,109,.28),transparent 65%)}
+html.green .deal::after{background:radial-gradient(circle,rgba(10,77,67,.12),transparent 65%)}
+html.green .deal .k{color:var(--mint)}
+html.green .deal p{color:var(--soft)}
+html.green .deal .im img{border-color:#fff;box-shadow:0 20px 40px -20px rgba(11,35,35,.4)}
+html.green .steps span{background:#fff;border:1px solid var(--line);color:var(--soft)}
+html.green .forme{background:#fff;border-color:var(--line)}
+html.green .forme li{border-color:var(--line)}
+html.green .forme p,html.green .forme li span{color:var(--soft)}
+
+/* ---------- category tiles (photo tiles keep a dark gradient for white text) ---------- */
+html.green .dt.dark::before{background:radial-gradient(circle,rgba(31,122,109,.35),transparent 65%)}
+
+/* ---------- reviews + newsletter ---------- */
+html.green .rc{background:#fff;border-color:var(--line)}
+html.green .rc p{color:var(--soft)}
+html.green .stars{color:#e8a817}
+html.green .who small{color:var(--muted)}
+html.green .av.c1{background:var(--olive)}html.green .av.c2{background:var(--olive-l)}html.green .av.c3{background:var(--g-deep)}html.green .av.c4{background:#7cc4b6;color:#0b2323}
+html.green .ar{border-color:var(--mint);color:var(--mint)}
+html.green .ar:hover{background:var(--mint);color:#fff}
+html.green .dots button{background:#e1e4e4}
+html.green .dots button.on{background:var(--mint)}
+html.green .news{background:linear-gradient(135deg,#eaecec,#f8f9f9);border:1px solid var(--line);color:var(--ink)}
+html.green .news h2{color:var(--ink)}
+html.green .news form{background:#fff;border:1px solid var(--line);box-shadow:none}
+html.green .news input{color:var(--ink)}
+
+/* ---------- footer (deep green, white text) ---------- */
+html.green footer.ft{background:var(--g-deep);border-top:0;color:#bfdcd6}
+html.green footer.ft::before{background:radial-gradient(circle,rgba(31,122,109,.3),transparent 65%)}
+html.green footer.ft::after{background:radial-gradient(circle,rgba(255,255,255,.08),transparent 65%)}
+html.green .ft-brand .logo,html.green .ft-col h4{color:#fff}
+html.green .ft-brand p{color:#bfdcd6}
+html.green .ft-contact li{color:#e6f3f0}
+html.green .ft-contact .i{color:#8fd1c4}
+html.green .ft-col a{color:#bfdcd6}
+html.green .ft-col a:hover{color:#fff}
+html.green .ft-tag{background:#8fd1c4;color:#0a4d43}
+html.green .soc a,html.green .totop{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#e6f3f0}
+html.green .totop:hover,html.green .soc a:hover{background:var(--brand2);border-color:transparent;color:#fff;box-shadow:none}
+html.green .ft-bar{border-top-color:rgba(255,255,255,.16);color:#bfdcd6}
+html.green .pay i{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#fff}
+html.green .pay .lock{color:#8fd1c4}
+html.green .legal a:hover{color:#fff}
+html.green .ft-mark{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.02) 85%);-webkit-background-clip:text;background-clip:text}
+
+/* ---------- cart drawer, menu, toast ---------- */
+html.green .ov{background:rgba(0,0,0,.55)}
+html.green .cart,html.green .drawer{background:#fff}
+html.green .ch,html.green .ci,html.green .cf{border-color:var(--line)}
+html.green .x{background:var(--g-soft);color:var(--ink)}
+html.green .ci img{background:var(--g-soft)}
+html.green .q{border-color:var(--line)}
+html.green .cf p,html.green .empty{color:var(--muted)}
+html.green .drawer a{border-color:var(--line)}
+html.green .toast{background:var(--g-deep);color:#fff}
+html.green .cf-view:hover{color:var(--mint)}
+@media (max-width:860px){
+  html.green .search{background:var(--g-soft);border-color:transparent}
+  html.green .search:focus-within{background:#fff}
+  html.green .tabbar{background:rgba(255,255,255,.95);border-top-color:var(--line)}
+  html.green .tabbar .on{color:var(--ink)}
+  html.green .tabbar .on .ic{background:var(--olive-m);color:var(--mint)}
+  html.green .ch::before,html.green .drawer::before{background:#e1e4e4}
+  html.green .quick{background:var(--mint);color:#fff}
+}
+
+/* ---------- shared page pieces (cart, checkout, forms, faq, contact, legal) ---------- */
+html.green .pg .crumbs a:hover,html.green .lk,html.green .lg-body a,html.green .faq-list .body a,html.green .ckl a{color:var(--mint)}
+html.green .sum,html.green .cos,html.green .card,html.green .fs,html.green .co-done,html.green .perk,html.green .cc{background:#fff;border-color:var(--line)}
+html.green .sum-row.free b{color:var(--mint)}
+html.green .sum-pay i{background:var(--g-soft);border-color:var(--line);color:var(--ink)}
+html.green .si img,html.green .si .ph,html.green .cp-item .im img,html.green .cp-item .im .ph{background:var(--g-soft)}
+html.green .si .t b{background:var(--mint);color:#fff}
+html.green .fs p b{color:var(--mint)}
+html.green .fs-bar{background:#e8eaea}
+html.green .cp-qty,html.green .pd-qty{border-color:var(--g-edge)}
+html.green .cp-qty button,html.green .pd-qty button{color:var(--soft)}
+html.green .cp-qty button:hover,html.green .pd-qty button:hover{color:var(--mint)}
+html.green .cp-rm:hover{color:#c93b32}
+html.green .fld input,html.green .fld select,html.green .fld textarea{background:#fff;border-color:var(--g-edge);color:var(--ink)}
+html.green .fld input::placeholder,html.green .fld textarea::placeholder{color:#94a8a5}
+html.green .fld input:focus,html.green .fld select:focus,html.green .fld textarea:focus{border-color:var(--mint);box-shadow:0 0 0 3px rgba(10,77,67,.14)}
+html.green .fld input:disabled{background:var(--g-soft);color:var(--muted)}
+html.green .fld select option,html.green .lp-sort select option{background:#fff;color:var(--ink)}
+html.green .ckl i,html.green .ck i{border-color:#a0ccc6}
+html.green .ckl i::after,html.green .ck i::after{border-left-color:#fff;border-bottom-color:#fff}
+html.green .ck.r i::after{background:#fff}
+html.green .po{border-color:var(--g-edge)}
+html.green .po:hover{border-color:#8dc6be}
+html.green .po .dot{border-color:#a0ccc6}
+html.green .po .dot::after{background:#fff}
+html.green .po:has(input:checked){border-color:var(--mint);background:rgba(10,77,67,.05)}
+html.green .po .tagc{background:var(--olive-m);color:var(--mint)}
+html.green .co-done .badge{background:var(--mint);color:#fff}
+html.green .co-done .demo{background:var(--olive-m);color:var(--mint)}
+html.green .ac-note,html.green .lg-note,html.green .acc-ok{background:var(--olive-m);color:#1f4a47}
+html.green .lg-note b{color:var(--g-deep)}
+html.green .ac-note .i{color:var(--mint)}
+html.green .perk .ic,html.green .cc .ic{background:var(--olive-m);color:var(--mint)}
+html.green a.cc:hover{border-color:var(--mint)}
+html.green .lg-toc{border-left-color:var(--line)}
+html.green .lg-toc a{color:var(--soft)}
+html.green .lg-toc a:hover,html.green .lg-toc a.on{color:var(--mint)}
+html.green .lg-body th{color:var(--ink)}
+html.green .lg-body th,html.green .lg-body td{border-bottom-color:var(--line)}
+html.green .fq-search input{background:#fff;border-color:var(--g-edge);color:var(--ink)}
+html.green .fq-search input:focus{border-color:var(--mint);box-shadow:0 0 0 3px rgba(10,77,67,.14)}
+html.green .fq-chips button{border-color:var(--g-edge);color:var(--soft)}
+html.green .fq-chips button:hover{border-color:var(--mint);color:var(--ink)}
+html.green .fq-chips button.on{background:var(--mint);border-color:var(--mint);color:#fff}
+html.green .faq-list summary::after,html.green .pd-faq-list summary::after{border-color:var(--g-edge);background:linear-gradient(var(--mint),var(--mint)) center/12px 1.5px no-repeat,linear-gradient(var(--mint),var(--mint)) center/1.5px 12px no-repeat}
+html.green .faq-list details[open] summary::after,html.green .pd-faq-list details[open] summary::after{border-color:var(--mint)}
+html.green .faq-list summary:hover,html.green .pd-faq-list summary:hover{color:var(--mint)}
+html.green .fq-none,html.green .lp-empty{border-color:var(--g-edge)}
+html.green .fq-cta{background:linear-gradient(135deg,#ebeeee,#f8f9f9);border-color:var(--line)}
+html.green .fq-cta p{color:var(--soft)}
+
+/* ---------- listing page ---------- */
+html.green .lf{background:#fff;border-color:var(--line)}
+html.green .lf-clear{color:var(--mint)}
+html.green .lf-range input{background:#fff;border-color:var(--g-edge);color:var(--ink)}
+html.green .lf-range input:focus{border-color:var(--mint);box-shadow:0 0 0 3px rgba(10,77,67,.15)}
+html.green .sw i{box-shadow:inset 0 0 0 1px rgba(11,35,35,.2)}
+html.green .lf-n{background:var(--mint);color:#fff}
+html.green .lp-sort select{background-color:#fff;border-color:var(--g-edge);color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2314803f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")}
+html.green .lp-chips button{background:var(--olive-m);color:var(--ink)}
+html.green .lp-chips button:hover{background:#e5e8e8}
+html.green .lp-chips button i{background:rgba(10,77,67,.14)}
+html.green .lp-chips button.all{background:transparent;border-color:#a0ccc6;color:var(--soft)}
+html.green .lp-prog{background:#e8eaea}
+html.green .lf::before{background:#e1e4e4}
+html.green .lp-count b{color:var(--ink)}
+
+/* ---------- product page ---------- */
+html.green .pd-gallery{background:var(--g-soft)}
+html.green .pd-gallery figure{background:var(--g-soft)}
+html.green .pd-fab button{background:#fff;border-color:var(--line);color:var(--ink);box-shadow:var(--sh)}
+html.green .pd-fab button:hover,html.green .pd-fab button.on{background:var(--mint);border-color:var(--mint);color:#fff}
+html.green .pd-count{background:rgba(255,255,255,.88);color:var(--ink)}
+html.green .pd-price em{background:var(--mint);color:#fff}
+html.green .pd-pills button{border-color:var(--g-edge);color:var(--soft)}
+html.green .pd-pills button i{box-shadow:inset 0 0 0 1px rgba(11,35,35,.2)}
+html.green .pd-pills button:hover{border-color:#8dc6be;color:var(--ink)}
+html.green .pd-pills button.on{border-color:var(--mint);color:var(--ink);background:rgba(10,77,67,.07)}
+html.green .pd-nav a:hover{color:var(--mint)}
+html.green .pd-acc,html.green .pd-acc details,html.green .pd-faq-list,html.green .pd-faq-list details{border-color:var(--line)}
+html.green .pd-faq-head a{color:var(--mint)}
+
+/* ---------- account area ---------- */
+html.green .acc-nav,html.green .acc-card,html.green .stat,html.green .oc,html.green .ad-card{background:#fff;border-color:var(--line)}
+html.green .av-l{background:var(--olive-m);color:var(--mint)}
+html.green .acc-nav nav a:hover{background:var(--g-soft)}
+html.green .acc-nav nav a[aria-current]{background:var(--olive-m);color:var(--ink)}
+html.green .acc-out{border-color:var(--g-edge);color:var(--soft)}
+html.green .acc-out:hover{border-color:#d4483f;color:#b8332a}
+html.green .stat:hover,html.green .oc:hover{border-color:var(--mint)}
+html.green .oc:hover{background:rgba(10,77,67,.04)}
+html.green .stt{background:#f2f3f3;color:var(--soft)}
+html.green .stt.placed{background:#fff4cf;color:#8a6a00}
+html.green .stt.printing{background:#e1f0fb;color:#1d5f94}
+html.green .stt.dispatched{background:#efe6fb;color:#6b3fb0}
+html.green .stt.delivered{background:var(--olive-m);color:var(--mint)}
+html.green .oc-th,html.green .oc-more{background:var(--g-soft)}
+html.green .ord-tabs button{border-color:var(--g-edge);color:var(--soft)}
+html.green .ord-tabs button.on{background:var(--mint);border-color:var(--mint);color:#fff}
+html.green .tl-s i{border-color:var(--g-edge);background:#fff}
+html.green .tl-s::before{background:#e8eaea}
+html.green .tl-s.done i{background:var(--mint);border-color:var(--mint);color:#fff}
+html.green .tl-s.done::before{background:var(--mint)}
+html.green .tl-s.cur i{border-color:var(--mint);color:var(--mint);box-shadow:0 0 0 4px rgba(10,77,67,.15)}
+html.green .ad-card.def{border-color:var(--mint)}
+html.green .ad-tag{background:var(--olive-m);color:var(--mint)}
+html.green .ad-act .lk.del{color:#b8332a}
+html.green dialog{background:#fff;color:var(--ink);border-color:var(--line)}
+html.green dialog::backdrop{background:rgba(0,0,0,.65)}
+html.green .acc-ok.bad,html.green .err{background:#fde8e6;color:#a8322a}
+html.green .danger{border-color:#f0c9c5}
+html.green .danger .btn{border-color:#d4483f;color:#b8332a}
+html.green .danger .btn:hover{background:#d4483f;color:#fff}
+
+/* ---------- Flexi Crew page ---------- */
+html.green .fx-nav a{color:var(--soft)}
+html.green .fx-nav a:hover{background:var(--g-soft);color:var(--ink)}
+html.green .fx-nav a.on{background:var(--olive-m);color:var(--ink)}
+html.green .fx-sub{color:var(--mint)}
+html.green .fx-banner{background:#edefef}
+html.green .fx-slot{border-color:rgba(10,77,67,.3);color:var(--muted);background:repeating-linear-gradient(0deg,rgba(10,77,67,.04) 0 3px,transparent 3px 7px)}
+html.green .fx-slot span{color:var(--mint)}
+html.green .fx-slot b{color:var(--ink)}
+html.green .fx-banner-hero.has::after{background:linear-gradient(90deg,rgba(255,255,255,.92),rgba(255,255,255,.55) 55%,rgba(255,255,255,0))}
+html.green .fx-hero{border-bottom-color:var(--line)}
+html.green .fx-size{background:#fff;border-color:var(--line)}
+html.green .fx-size:hover{border-color:#8dc6be}
+html.green .fx-size.on{border-color:var(--mint);background:linear-gradient(160deg,#eef0f0,#fff);box-shadow:0 14px 30px -18px rgba(10,77,67,.45)}
+html.green .fx-size em,html.green .fx-cbtn{background:var(--mint);color:#fff}
+html.green .fx-cbtn:hover{background:var(--g-hover)}
+html.green .fx-ar,html.green .fx-ghost{border-color:#a0ccc6;color:var(--ink)}
+html.green .fx-ar:hover,html.green .fx-ghost:hover{border-color:var(--mint);color:var(--mint)}
+html.green .fx-dots button{background:#e1e4e4}
+html.green .fx-dots button.on{background:var(--mint)}
+html.green .fx-bcard,html.green .fx-card{background:#fff;border-color:var(--line)}
+html.green .fx-bimg{background:var(--g-soft)}
+html.green .fx-collage span{color:rgba(11,35,35,.4)}
+html.green .fx-binfo small,html.green .fx-bv-head small{color:var(--mint)}
+html.green .fx-bmeta span{background:#edefef;color:var(--soft)}
+html.green .fx-back{background:var(--g-soft);color:var(--ink)}
+html.green .fx-back:hover{background:var(--olive-m)}
+html.green .fx-bv-head h2 .serif{background:linear-gradient(120deg,var(--g-deep),var(--brand2));-webkit-background-clip:text;background-clip:text}
+html.green .fx-dot{box-shadow:0 0 0 3px rgba(11,35,35,.08)}
+html.green .fx-wig{background:rgba(255,255,255,.88);color:var(--ink)}
+html.green .fx-ph{color:rgba(11,35,35,.7)}
+html.green .fx-bar{background:rgba(255,255,255,.95);border-top-color:var(--line)}
+html.green .fx-track{background:#e8eaea}
+html.green .fx-bar.full .fx-prog-t span{color:var(--mint)}
+html.green .fx-steps>div{background:#fff;border-color:var(--line)}
+html.green .fx-steps b{background:var(--olive-m);color:var(--mint)}
+html.green .fx-hero-copy .sub{color:var(--soft)}
+html.green .fx-show-track{background:#edefef;box-shadow:0 30px 60px -38px rgba(10,77,67,.45)}
+html.green .fx-show-dots button{background:#e1e4e4}
+html.green .fx-show-dots button.on{background:var(--mint)}
+
+/* ---------- misc ---------- */
+html.green .skeleton{background:var(--g-soft)}
+@media print{html.green body{background:#fff}}
+
+/* logo mark + wordmark in green */
+html.green .logo svg path:nth-of-type(1){fill:#1f7a6d}
+html.green .logo svg path:nth-of-type(2){fill:#0a4d43}
+html.green .logo svg path:nth-of-type(3){fill:#0a4d43}
+html.green .ft-brand .logo svg path:nth-of-type(1){fill:#8fd1c4}
+html.green .ft-brand .logo svg path:nth-of-type(2){fill:#1f7a6d}
+html.green .ft-brand .logo svg path:nth-of-type(3){fill:#0a4d43}
+html.green .ft-brand .logo em{background:linear-gradient(120deg,#8fd1c4,#ffffff);-webkit-background-clip:text;background-clip:text}
+
+/* ---------- Flexi pack: deep green panel with white text ---------- */
+html.green .pack{background:radial-gradient(circle at 12% 0%,rgba(255,255,255,.1),rgba(255,255,255,0) 45%),radial-gradient(circle at 92% 90%,rgba(63,191,152,.22),rgba(63,191,152,0) 50%),linear-gradient(135deg,#0d5a4e 0%,#0a4d43 48%,#073a33 100%);border:0;color:#fff;box-shadow:0 30px 60px -34px rgba(7,58,51,.6)}
+html.green .pack::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.2px,transparent 1.4px);background-size:22px 22px;mask-image:linear-gradient(90deg,#000,transparent 55%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 55%);pointer-events:none}
+html.green .pack .t,html.green .pack .im{position:relative;z-index:1}
+html.green .pack .k{color:#8fd8c4;display:flex;align-items:center;gap:10px}
+html.green .pack .k::before{content:"";width:28px;height:2px;background:#8fd8c4;border-radius:2px}
+html.green .pack h2{color:#fff}
+html.green .pack p{color:rgba(255,255,255,.78)}
+html.green .tiers button{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.18);color:#fff}
+html.green .tiers button small{color:rgba(255,255,255,.62)}
+html.green .tiers button:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4);translate:0 -3px}
+html.green .tiers button.on{background:#fff;color:#0b2323;border-color:#fff;box-shadow:0 14px 26px -14px rgba(0,0,0,.5)}
+html.green .tiers button.on small{color:#5a7370}
+html.green .pack .nd>span{color:rgba(255,255,255,.72)}
+html.green .pack .cd div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;backdrop-filter:blur(6px)}
+html.green .pack .cd span{color:rgba(255,255,255,.62)}
+html.green .pack .btn{background:#fff;color:#0a4d43;font-weight:800}
+html.green .pack .btn:hover{background:#d9f3ea;color:#0a4d43;box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
+html.green .pack .im img{border:4px solid #fff;box-shadow:0 24px 44px -18px rgba(0,0,0,.55)}
+html.green .pack .im::before{background:radial-gradient(circle,rgba(143,216,196,.38),rgba(143,216,196,0) 68%)}
+
+/* custom & corporate: crisper stat boxes + soft glow behind the photos */
+html.green .cd.stats div{background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px -14px rgba(11,35,35,.35)}
+html.green .cd.stats b{color:var(--mint)}
+html.green .deal .im::before{content:"";position:absolute;left:50%;top:50%;width:80%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(10,77,67,.16),rgba(10,77,67,0) 66%);z-index:-1;transition:scale .6s cubic-bezier(.2,.9,.3,1.2)}
+html.green .deal:hover .im::before{scale:1.12}
+html.green .steps span{box-shadow:0 6px 14px -12px rgba(11,35,35,.4)}
+
+/* sticky add-to-cart bar */
+html.green .sbar{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top-color:var(--line);box-shadow:0 -14px 30px -20px rgba(11,35,35,.4)}
+html.green .sb-colors button{border-color:var(--g-edge)}
+html.green .sb-colors button:hover{border-color:#8fc4a4}
+html.green .sb-colors button.on{background:rgba(10,77,67,.07)}
+html.green .sb-colors button i{box-shadow:inset 0 0 0 1px rgba(11,35,35,.2)}
+
+/* sign-in pages */
+html.green .auth{background:#fff;border-color:var(--line)}
+html.green .auth-side{background:linear-gradient(150deg,#0d5a4e,#0a4d43 55%,#06302b)}
+html.green .hub-card,html.green .auth-note{background:#fff}
+html.green .auth-note{background:var(--olive-m)}
+html.green .eye:hover{background:var(--olive-m)}
+
+/* simple sign-in pages */
+html.green .simple-card{background:#fff;box-shadow:0 24px 50px -30px rgba(11,35,35,.35);border:1px solid var(--line)}
+
+html.green .fx-tname{background:rgba(255,255,255,.9);color:var(--ink)}
+html.green .fx-tile:hover{box-shadow:0 18px 34px -22px rgba(10,77,67,.5)}
+
+/* WhatsApp link in the header's right-hand note: same look as the text beside it */
+.nav .r a,html.green .nav .r a{padding:0;border-radius:0;font-size:inherit;font-weight:600;color:inherit;background:none;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(10,77,67,.35)}
+.nav .r a:hover,html.green .nav .r a:hover{background:none;color:var(--ink)}
+
+/* phones: shorter footer */
+@media (max-width:640px){
+  footer.ft{padding-top:40px}
+  .ft-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 12px}
+  .ft-brand{grid-column:1/-1}
+  .ft-contact{margin:14px 0}
+  .ft-col h4{margin-bottom:12px;font-size:11px}
+  .ft-col li{margin-bottom:9px;font-size:12.5px}
+  .ft-bar{margin-top:28px;padding:18px 0;gap:12px}
+  .ft-mark{font-size:22vw}
+}
+
+/* pop-ups (dialogs, cart, menu, toast) cast neutral black shadows, never green */
+html.green dialog{box-shadow:0 30px 80px -24px rgba(0,0,0,.55)}
+html.green .cart,html.green .drawer{box-shadow:-24px 0 60px -24px rgba(0,0,0,.45)}
+@media (max-width:900px){html.green .cart,html.green .drawer{box-shadow:0 -20px 50px -20px rgba(0,0,0,.45)}}
+html.green .toast{box-shadow:0 12px 30px -8px rgba(0,0,0,.4)}

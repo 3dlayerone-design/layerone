@@ -1,0 +1,14 @@
+.lo-hero-editor{border:1px solid #dcdcde;border-radius:8px;padding:16px;background:#f6f7f7;display:grid;gap:14px}
+.lo-hero-title{display:flex;gap:10px;align-items:center}
+.lo-hero-title small{display:block;color:#50575e}
+.lo-hero-slide{background:#fff;border:1px solid #dcdcde;border-radius:6px;padding:14px;display:grid;gap:10px}
+.lo-hero-slide-head{display:flex;justify-content:space-between;align-items:center}
+.lo-hero-slide-tools{display:flex}
+.lo-hero-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lo-hero-slide .components-base-control{margin:0}
+.lo-hero-color{display:grid;gap:6px}
+.lo-hero-color-label{font-size:11px;font-weight:500;text-transform:uppercase}
+.lo-hero-color-row{display:flex;gap:10px;align-items:center}
+.lo-hero-color-row input[type=color]{width:44px;height:32px;padding:0;border:1px solid #8c8f94;border-radius:4px;background:#fff;cursor:pointer}
+.lo-hero-color-note{color:#757575;font-size:12px}
+.lo-hero-remove,.lo-door-remove,.lo-tile-remove{margin-top:14px;padding-top:12px;border-top:1px solid #dcdcde}

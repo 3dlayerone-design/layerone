@@ -1,0 +1,28 @@
+/* gentle motion, CSS only. Nothing is hidden by script; browsers without scroll-driven animations just show the page as is. */
+@keyframes moUp{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@keyframes moFade{from{opacity:0}to{opacity:1}}
+@keyframes moShadow{from{box-shadow:0 0 0 rgba(11,35,35,0)}to{box-shadow:0 10px 30px -22px rgba(11,35,35,.45)}}
+
+/* hero text arrives line by line on load */
+.hero .copy>*{animation:moUp .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .copy>:nth-child(2){animation-delay:.08s}
+.hero .copy>:nth-child(3){animation-delay:.16s}
+.hero .copy>:nth-child(4){animation-delay:.24s}
+.hero .copy>:nth-child(n+5){animation-delay:.32s}
+
+/* sections ease in as they scroll into view */
+@supports (animation-timeline:view()){
+  .sh,.cat,.promo,.dt,.ln,.deal,.pack,.news,.ft-col,.simple-card{
+    animation:moUp linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+  .header{animation:moShadow linear both;animation-timeline:scroll(root);animation-range:0 90px}
+}
+
+/* calm hover / press feedback */
+.prod{transition:translate .35s cubic-bezier(.2,.7,.2,1)}
+.prod:hover{translate:0 -4px}
+.btn:active,.ar:active{scale:.97}
+.fld input,.fld select,.fld textarea{transition:border-color .25s ease,box-shadow .25s ease}
+
+@media (prefers-reduced-motion:reduce){
+  .hero .copy>*,.sh,.cat,.promo,.dt,.ln,.deal,.pack,.news,.ft-col,.simple-card,.header{animation:none!important}
+}

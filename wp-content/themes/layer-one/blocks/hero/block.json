@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/hero",
+	"title": "Hero spotlight",
+	"category": "layer-one",
+	"icon": "star-filled",
+	"description": "Home page hero: a rotating spotlight of WooCommerce products with price, add to cart and thumbnails.",
+	"keywords": ["hero", "spotlight", "banner", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"slides": { "type": "array", "default": [] },
+		"autoplay": { "type": "boolean", "default": true },
+		"duration": { "type": "number", "default": 6 }
+	},
+	"supports": { "html": false, "align": false, "multiple": false },
+	"editorScript": "file:./editor.js",
+	"editorStyle": "file:./editor.css",
+	"viewScript": "file:./view.js",
+	"style": "layerone-landing2",
+	"render": "file:./render.php"
+}
