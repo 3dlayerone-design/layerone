@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Site footer. Columns and bottom links come from the footer menu locations; text from Customizer > Footer.
  */

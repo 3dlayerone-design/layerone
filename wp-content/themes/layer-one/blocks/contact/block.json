@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/contact",
+	"title": "Contact",
+	"category": "layer-one",
+	"icon": "email-alt",
+	"description": "Contact cards and a message form that opens the visitor's email app.",
+	"keywords": ["contact", "form", "email", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"heading": { "type": "string", "default": "Contact us" },
+		"intro": { "type": "string", "default": "Order help, custom quotes or a question about a product. We usually reply within one working day." },
+		"email": { "type": "string", "default": "3d.layer.one@gmail.com" },
+		"cards": {
+			"type": "array",
+			"default": [
+				{ "icon": "mail", "title": "Email", "text": "Best for quotes, files and longer questions.", "value": "3d.layer.one@gmail.com", "url": "mailto:3d.layer.one@gmail.com" },
+				{ "icon": "chat", "title": "WhatsApp", "text": "Quick order help and custom order previews.", "value": "+91 88741 02088", "url": "https://wa.me/918874102088" },
+				{ "icon": "clock", "title": "Hours", "text": "We reply during working hours.", "value": "Mon–Sat, 10am – 7pm IST", "url": "" },
+				{ "icon": "pin", "title": "Print farm", "text": "Printed and packed here, shipped across India.", "value": "NCR, India", "url": "" },
+				{ "icon": "help", "title": "Read the FAQs", "text": "Shipping, payments, care and custom orders, answered.", "value": "View all questions →", "url": "/faq/" }
+			]
+		},
+		"formTitle": { "type": "string", "default": "Send us a message" },
+		"formText": { "type": "string", "default": "Fill this in and your email app opens with the message ready to send." },
+		"topics": { "type": "string", "default": "Order help\nCustom order or corporate quote\nWholesale for shops\nProduct question\nSomething else" }
+	},
+	"supports": { "html": false, "align": false },
+	"editorScript": "file:./editor.js",
+	"viewScript": "file:./view.js",
+	"style": "layerone-pages",
+	"render": "file:./render.php"
+}

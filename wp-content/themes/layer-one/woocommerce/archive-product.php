@@ -122,7 +122,7 @@ $config = array(
         <button type="button" class="btn btn-line btn-sm lf-open" id="openFilters"><svg class="i" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filters <span class="lf-n" id="fCount" hidden>0</span></button>
         <span class="lp-count" id="count">0 products</span>
         <label class="lp-sort"><span>Sort by</span>
-          <select id="sort">
+          <select id="sort" aria-label="Sort products">
             <option value="featured">Featured</option>
             <option value="new">Newest</option>
             <option value="low">Price: low to high</option>

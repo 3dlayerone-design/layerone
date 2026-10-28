@@ -140,7 +140,9 @@
 .lg-note{display:flex;gap:12px;padding:16px 18px;border-radius:16px;background:var(--olive-m);color:#d6dccd;font-size:12.5px;line-height:1.55;margin-bottom:34px}
 .lg-note b{color:#fff}
 .lg-body section{scroll-margin-top:150px;margin-bottom:38px}
-.lg-body h2{font-size:21px;letter-spacing:-.03em;font-weight:800;margin-bottom:12px}
+.lg-body h2{font-size:21px;letter-spacing:-.03em;font-weight:800;margin-bottom:12px;scroll-margin-top:150px}
+.lg-body h2:not(:first-child){margin-top:38px}
+.lg-body figure{margin:0}
 .lg-body h3{font-size:14.5px;margin:20px 0 6px}
 .lg-body p,.lg-body li{color:var(--soft);line-height:1.75;font-size:14.5px}
 .lg-body p+p{margin-top:12px}

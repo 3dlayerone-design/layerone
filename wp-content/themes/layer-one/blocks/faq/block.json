@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/faq",
+	"title": "FAQs",
+	"category": "layer-one",
+	"icon": "editor-help",
+	"description": "Page heading, searchable question groups and a help box at the bottom.",
+	"keywords": ["faq", "questions", "help", "layer one"],
+	"textdomain": "layer-one",
+	"attributes": {
+		"heading": { "type": "string", "default": "Frequently asked" },
+		"headingAccent": { "type": "string", "default": "questions" },
+		"intro": { "type": "string", "default": "Everything about orders, shipping, payments, care and custom gifts." },
+		"groups": { "type": "array", "default": [] },
+		"helpTitle": { "type": "string", "default": "Still need help?" },
+		"helpText": { "type": "string", "default": "Our team replies within one working day." },
+		"helpLabel": { "type": "string", "default": "Contact us" },
+		"helpUrl": { "type": "string", "default": "" }
+	},
+	"supports": { "html": false, "align": false },
+	"editorScript": "file:./editor.js",
+	"viewScript": "file:./view.js",
+	"style": "layerone-pages",
+	"render": "file:./render.php"
+}

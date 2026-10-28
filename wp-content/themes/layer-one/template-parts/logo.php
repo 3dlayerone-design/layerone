@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Logo: the uploaded custom logo, else the Layer One mark with the two-part wordmark.
  */

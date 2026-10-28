@@ -14,6 +14,19 @@
   function Area(label, value, onChange, extra) {
     return el(c.TextareaControl, Object.assign({ label: label, value: value || '', rows: 3, onChange: onChange }, extra || {}));
   }
+  /* Rich text field: bold, italic and links, saved as simple HTML. */
+  function Rich(label, value, onChange, opts) {
+    opts = opts || {};
+    return el('div', { className: 'components-base-control' },
+      el('label', { className: 'components-base-control__label', style: { display: 'block', marginBottom: 6, fontSize: 11, fontWeight: 500, textTransform: 'uppercase' } }, label),
+      el(wp.blockEditor.RichText, {
+        tagName: 'div', value: value || '', onChange: onChange, placeholder: opts.placeholder || '',
+        allowedFormats: opts.formats || ['core/bold', 'core/italic', 'core/link'],
+        style: { border: '1px solid #8c8f94', borderRadius: 2, padding: '8px 10px', background: '#fff', minHeight: opts.minHeight || 60, fontSize: 13 }
+      }),
+      opts.help ? el('p', { className: 'components-base-control__help', style: { margin: '4px 0 0', color: '#50575e', fontSize: 12 } }, opts.help) : null
+    );
+  }
   function Row(children, cols) {
     return el('div', { style: { display: 'grid', gridTemplateColumns: cols || '1fr 1fr', gap: '12px' } }, children);
   }
@@ -147,5 +160,5 @@
   var BOX = { border: '1px solid #dcdcde', borderRadius: 8, padding: 16, background: '#f6f7f7', display: 'grid', gap: 14 };
   var CARD = { background: '#fff', border: '1px solid #dcdcde', borderRadius: 6, padding: 14, display: 'grid', gap: 10 };
 
-  window.LOEd = { el: el, patch: patch, Text: Text, Area: Area, Row: Row, Media: Media, Repeater: Repeater, Rows: Rows, useFlexiOptions: useFlexiOptions, ProductPicker: ProductPicker, TagAndProducts: TagAndProducts, Header: Header, BOX: BOX, CARD: CARD };
+  window.LOEd = { el: el, patch: patch, Text: Text, Area: Area, Rich: Rich, Row: Row, Media: Media, Repeater: Repeater, Rows: Rows, useFlexiOptions: useFlexiOptions, ProductPicker: ProductPicker, TagAndProducts: TagAndProducts, Header: Header, BOX: BOX, CARD: CARD };
 })(window.wp);

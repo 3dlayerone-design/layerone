@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Track an order with the order number and the mobile number used for it. No sign-in needed.
  */
@@ -13,7 +16,7 @@ if ( isset( $_POST['lo_track'] ) ) {
 	} else {
 		$order = layerone_find_order( isset( $_POST['number'] ) ? wp_unslash( $_POST['number'] ) : '', isset( $_POST['phone'] ) ? wp_unslash( $_POST['phone'] ) : '' );
 		if ( ! $order ) {
-			$error = 'We could not find an order with that number and mobile number.';
+			$error = layerone_track_locked() ? 'Too many tries. Please wait 15 minutes and try again.' : 'We could not find an order with that number and mobile number.';
 		}
 	}
 }

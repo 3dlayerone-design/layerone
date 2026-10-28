@@ -1,3 +1,41 @@
+# BEGIN Layer One speed
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript text/javascript application/json image/svg+xml font/ttf
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/avif "access plus 1 year"
+ExpiresByType video/mp4 "access plus 1 year"
+ExpiresByType video/webm "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+<FilesMatch "\.(css|js|woff2|webp|jpg|jpeg|png|svg|avif|mp4|webm)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+</IfModule>
+# END Layer One speed
+
+# BEGIN Layer One security
+Options -Indexes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# hidden files and folders (.git, .env ...) and server files are never served
+RewriteRule (^|/)\.(?!well-known/) - [F,L]
+RewriteRule ^(readme\.html|license\.txt|wp-config\.php|wp-config-sample\.php|xmlrpc\.php)$ - [F,L]
+RewriteRule ^wp-content/(debug\.log|.*\.(sql|bak|log|ini))$ - [F,L]
+# nothing executable runs from the uploads folder
+RewriteRule ^wp-content/uploads/.*\.(php|phtml|phar)$ - [F,L]
+</IfModule>
+# END Layer One security
+
 
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are

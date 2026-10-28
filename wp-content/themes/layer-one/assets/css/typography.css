@@ -1,0 +1,44 @@
+/*
+ * Layer One typography: Manrope for headings, navigation and buttons, Inter for body text and prices.
+ *
+ *   Main hero heading ........ Manrope 800
+ *   Section headings ......... Manrope 700
+ *   Product titles ........... Manrope 600
+ *   Body text ................ Inter 400
+ *   Product prices ........... Inter 700
+ *   Navigation & buttons ..... Manrope 600
+ *
+ * Every rule starts with "html body" so it wins over the design stylesheets whatever order they load in.
+ */
+
+:root{
+  --f:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-head:'Manrope','Inter',system-ui,sans-serif;
+  --serif:var(--f-head);
+}
+
+/* body text */
+html body{font-family:var(--f);font-weight:400}
+
+/* headings, card titles and the brand name */
+html body :is(h1,h2,h3,h4,h5,h6,.logo,.logo span,.simple-h,.fx-sub){font-family:var(--f-head)}
+
+/* the accent words inside headings: same family as the heading, upright (Manrope has no italic) */
+html body :is(.serif,.l2 .serif,.cx .serif){font-family:var(--f-head);font-style:normal;font-weight:inherit;letter-spacing:inherit}
+
+/* section headings: Manrope 700 */
+html body :is(h2,h3,.sh h2,.l2-sh h2,.cx-sh h2,.v2-shead h2,.pd-faq-head h2,.l2-fx h2,.deal h2,.pack h2,.news h2,.fx-bv-head h2,.v2-bcopy h2,.cx-end h2,.auth-side h2,.door-txt h2,.dt h3,.l2-bh h3,.figc h3,.v2-binfo h3,.forme h3,.acc-card h2,.sum h2,.cos h2,.co-done h2,.cp-empty h2,.lp-empty h3,.acc-empty h3){font-weight:700!important}
+
+/* main hero and page headings: Manrope 800 */
+html body :is(h1,.l2-intro h1,.cx-hero h1,.cx-top h1,.lp-head h1,.pg-head h1,.acc-head h1,.auth-card h1,.simple-h,.fx-hero h1,.l2-spot-copy h2){font-weight:800!important}
+
+/* product titles: Manrope 600 */
+html body :is(.pinfo h3,.prod h3,.pd-info h1,.cp-item h3,.cp-item h3 a,.pd-rel h3,.si>div:nth-child(2),.ri>div b,.v2-cap b,.sb-info b,.ci b,.ci b a,.chip.b b,.fx-tname){font-family:var(--f-head);font-weight:600!important}
+
+/* navigation and buttons: Manrope 600 */
+html body :is(.btn,button,.nav a,.nav .r,.tool,.drawer a,.tabbar>*,.quick,.vw,.door-go,.lk,.more,.cp,.cp-rm,.l2-btn-w,.l2-btn-o,.v2-ghost,.crumbs,input[type=submit]){font-family:var(--f-head);font-weight:600}
+html body :is(.q button,.cp-qty button,.pd-qty button,.heart,.v2-add){font-family:var(--f-head)}
+
+/* product prices: Inter 700 */
+html body :is(.price,.price b,.pd-price,.dp,.sp-price b,.sum-row b,.sum-total span,.tot,.pr,.oc-p,.ri>b,.v2-bprice b,.chip .p,.si>div:last-child,.each,.sb-info span){font-family:var(--f);font-weight:700}
+html body :is(.price s,.pd-price s,.dp s,.sp-price s,.pd-price em){font-weight:400}

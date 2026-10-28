@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * "Frequently asked questions" under every product. The questions live in this list; change the texts here.
  */

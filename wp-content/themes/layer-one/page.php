@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Pages. A page built from Layer One blocks is shown full width without a title; any other page gets a plain title and text.
  */

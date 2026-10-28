@@ -695,12 +695,20 @@ add_shortcode( 'layerone_track_order', function () {
 
 /* Find an order by its number and the mobile number it was placed with. */
 function layerone_find_order( $number, $phone ) {
+	if ( layerone_track_locked() ) {
+		return null;
+	}
 	$id    = absint( preg_replace( '/\D/', '', (string) $number ) );
 	$order = $id ? wc_get_order( $id ) : null;
 	$mine  = substr( preg_replace( '/\D/', '', (string) $phone ), -10 );
 	if ( ! $order || strlen( $mine ) < 10 ) {
+		layerone_track_miss();
 		return null;
 	}
 	$theirs = substr( preg_replace( '/\D/', '', (string) $order->get_billing_phone() ), -10 );
-	return hash_equals( $theirs, $mine ) ? $order : null;
+	if ( hash_equals( $theirs, $mine ) ) {
+		return $order;
+	}
+	layerone_track_miss();
+	return null;
 }

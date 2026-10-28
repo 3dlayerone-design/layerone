@@ -1,7 +1,7 @@
 <?php
 /**
  * Layer One fonts everywhere: the public site (see functions.php), wp-admin, the block editor,
- * the Customizer and the login screen all use the same two Google fonts.
+ * the Customizer and the login screen all use the same two fonts, served from the theme.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function layerone_fonts_url() {
-	return 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap';
+	return get_template_directory_uri() . '/assets/css/fonts.css?ver=' . LAYERONE_VERSION;
 }
 
 function layerone_enqueue_admin_fonts() {

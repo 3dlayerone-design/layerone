@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Wishlist page for visitors who are not signed in (the list is kept in the browser; signed-in customers see it in My account).
  */

@@ -109,7 +109,8 @@
     $('#sort').value = state.sort;
     if (!append) { renderFilters(); renderChips(list); }
     var from = append ? rendered : 0;
-    var html = l.slice(from, shown).map(function (p) { return p.html; }).join('');
+    /* the first row is on screen at once: load it straight away instead of waiting for scroll */
+    var html = l.slice(from, shown).map(function (p, i) { return (!append && i < 2) ? p.html.replace('loading="lazy"', 'loading="eager" fetchpriority="high"') : p.html; }).join('');
     if (append) $('#lpGrid').insertAdjacentHTML('beforeend', html); else $('#lpGrid').innerHTML = html;
     rendered = shown;
 

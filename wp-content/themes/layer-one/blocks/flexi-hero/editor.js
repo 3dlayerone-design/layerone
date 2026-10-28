@@ -14,7 +14,7 @@
         L.Row([t('Small badge', 'badge'), t('Line next to the badge', 'eyebrow')]),
         L.Row([t('Heading', 'heading'), t('Heading, italic part', 'headingAccent')]),
         L.Area('Intro text', a.intro, function (v) { setA('intro', v); }),
-        t('"From" line', 'fromText', { help: '{price} = cheapest price per figure, {n} = biggest box. <b> makes text bold.' }),
+        L.Rich('"From" line', a.fromText, function (v) { setA('fromText', v); }, { formats: ['core/bold'], minHeight: 36, help: '{price} = cheapest price per figure, {n} = biggest box. Select text to make it bold.' }),
         L.Row([t('Button 1 text', 'btn1'), t('Button 2 text', 'btn2')])
       ),
       el(c.PanelBody, { title: 'Figure wall', initialOpen: false },

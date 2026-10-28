@@ -41,6 +41,7 @@ foreach ( (array) $attributes['tiles'] as $t ) {
 		'url'   => is_wp_error( $url ) ? layerone_shop_url() : $url,
 		'from'  => $from,
 		'img'   => ! empty( $t['imageId'] ) ? wp_get_attachment_image_url( (int) $t['imageId'], 'large' ) : '',
+		'set'   => ! empty( $t['imageId'] ) ? layerone_srcset_attrs( (int) $t['imageId'], ! empty( $t['wide'] ) ? '(max-width:700px) 92vw, 640px' : '(max-width:700px) 92vw, 330px' ) : '',
 		'wide'  => ! empty( $t['wide'] ),
 	);
 }
@@ -64,8 +65,8 @@ $link_url = $attributes['linkUrl'] ? $attributes['linkUrl'] : layerone_cat_url( 
   </div>
   <div class="decor hd7">
     <?php foreach ( $tiles as $k => $t ) : ?>
-    <a href="<?php echo esc_url( $t['url'] ); ?>" class="dt photo<?php echo $t['wide'] ? ' wide' : ''; ?>" style="--c:#141414;animation-delay:<?php echo esc_attr( $k * 0.07 ); ?>s" aria-label="<?php echo esc_attr( $t['title'] . ( $t['from'] ? ', ' . $t['from'] : '' ) ); ?>">
-      <div class="pic"><?php if ( $t['img'] ) : ?><img src="<?php echo esc_url( $t['img'] ); ?>" alt="" loading="lazy" decoding="async"><?php endif; ?></div>
+    <a href="<?php echo esc_url( $t['url'] ); ?>" class="dt photo<?php echo $t['wide'] ? ' wide' : ''; ?>" style="--c:#141414;animation-delay:<?php echo esc_attr( $k * 0.07 ); ?>s">
+      <div class="pic"><?php if ( $t['img'] ) : ?><img src="<?php echo esc_url( $t['img'] ); ?>"<?php echo $t['set']; // phpcs:ignore WordPress.Security.EscapeOutput ?> alt="" loading="lazy" decoding="async"><?php endif; ?></div>
       <div class="top"><div><small>Category</small><h3><?php echo esc_html( $t['title'] ); ?></h3></div></div>
       <div class="bot"><div class="dp"><?php echo esc_html( $t['from'] ); ?></div><span class="vw">View <i>→</i></span></div>
     </a>

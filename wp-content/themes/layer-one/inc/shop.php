@@ -196,6 +196,25 @@ add_filter( 'layerone_cart_line_note', function ( $note, $item ) {
 	return ! empty( $item['lo_colour'] ) ? trim( $note . ' · ' . ucfirst( $item['lo_colour'] ), ' ·' ) : $note;
 }, 10, 2 );
 
+/* No cart line can hold more than 99 of anything (cart page, cart sheet and the add buttons all go through these). */
+add_filter( 'woocommerce_update_cart_validation', function ( $ok, $key, $values, $qty ) {
+	if ( (int) $qty > 99 ) {
+		wc_add_notice( 'You can order up to 99 of one item at a time.', 'error' );
+		return false;
+	}
+	return $ok;
+}, 10, 4 );
+add_filter( 'woocommerce_quantity_input_max', function ( $max ) {
+	return ( $max > 0 && $max < 99 ) ? $max : 99;
+} );
+add_filter( 'woocommerce_add_to_cart_validation', function ( $ok, $product_id, $quantity = 1 ) {
+	if ( $ok && (int) $quantity > 99 ) {
+		wc_add_notice( 'You can order up to 99 of one item at a time.', 'error' );
+		return false;
+	}
+	return $ok;
+}, 5, 3 );
+
 /* "Clear cart" link on the cart page. */
 add_action( 'wp_loaded', function () {
 	if ( empty( $_GET['lo_clear_cart'] ) || ! function_exists( 'WC' ) || ! WC()->cart ) { // phpcs:ignore WordPress.Security.NonceVerification

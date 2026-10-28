@@ -137,7 +137,7 @@ if ( ! function_exists( 'layerone_flexi_tile' ) ) {
     </div>
     <div class="l2-bundles" id="bundleRow">
       <?php foreach ( $bundles as $b ) : ?>
-      <a class="l2-bundle" href="<?php echo esc_url( $b['url'] ); ?>"><?php if ( $b['banner'] ) : ?><img src="<?php echo esc_url( $b['banner'] ); ?>" alt="" loading="lazy"><?php endif; ?>
+      <a class="l2-bundle" href="<?php echo esc_url( $b['url'] ); ?>"><?php if ( $b['banner'] ) : ?><img src="<?php echo esc_url( $b['banner'] ); ?>"<?php echo isset( $b['bannerSet'] ) ? $b['bannerSet'] : ''; // phpcs:ignore WordPress.Security.EscapeOutput ?> alt="" loading="lazy"><?php endif; ?>
         <div><b><?php echo esc_html( $b['name'] ); ?></b><span><?php echo esc_html( $b['line'] ); ?></span></div><?php if ( $b['badge'] ) : ?><em><?php echo esc_html( $b['badge'] ); ?></em><?php endif; ?></a>
       <?php endforeach; ?>
     </div>

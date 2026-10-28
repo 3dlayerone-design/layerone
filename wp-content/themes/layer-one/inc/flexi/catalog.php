@@ -121,6 +121,7 @@ function layerone_flexi_build_catalog() {
 			'line'    => wp_strip_all_tags( $p->get_short_description() ),
 			'badge'   => (string) get_post_meta( $id, '_lo_badge', true ),
 			'banner'  => $img ? (string) wp_get_attachment_image_url( $img, 'large' ) : '',
+			'bannerSet' => $img ? layerone_srcset_attrs( $img, '(max-width:700px) 300px, 330px' ) : '',
 			'url'     => layerone_flexi_page_url() . '#' . ( ( $t = get_term( (int) get_post_meta( $id, '_lo_bundle_term', true ), LAYERONE_FLEXI_TAX ) ) && ! is_wp_error( $t ) ? $t->slug : '' ),
 			'figures' => layerone_flexi_bundle_figure_ids( $id ),
 			'inStock' => $p->is_in_stock(),

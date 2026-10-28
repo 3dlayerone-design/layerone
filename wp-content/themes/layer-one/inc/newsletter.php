@@ -10,11 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function layerone_droplist_submit() {
 	$email = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
 	$nonce = isset( $_POST['_lo_nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['_lo_nonce'] ) ) : '';
-	$ok    = is_email( $email ) && wp_verify_nonce( $nonce, 'layerone_droplist' );
+	$ok    = is_email( $email ) && strlen( $email ) <= 100 && wp_verify_nonce( $nonce, 'layerone_droplist' ) && layerone_rate_ok( 'droplist', 5, HOUR_IN_SECONDS );
 
 	if ( $ok ) {
 		$list = (array) get_option( 'layerone_droplist', array() );
-		if ( ! in_array( $email, $list, true ) ) {
+		if ( ! in_array( $email, $list, true ) && count( $list ) < 20000 ) {
 			$list[] = $email;
 			update_option( 'layerone_droplist', $list, false );
 		}

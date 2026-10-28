@@ -58,8 +58,9 @@ $classes = array( 'd-fx', 'd-hd', 'd-cu' );
         		continue;
         	}
         	printf(
-        		'<img src="%s" alt="" class="%s" %s decoding="async">',
+        		'<img src="%s"%s alt="" class="%s" %s decoding="async">',
         		esc_url( $src ),
+        		layerone_srcset_attrs( $media_id, '(max-width:700px) 52vw, 300px' ), // phpcs:ignore WordPress.Security.EscapeOutput
         		0 === $i ? 'on' : '',
         		0 === $i ? 'fetchpriority="high"' : 'loading="lazy"'
         	);

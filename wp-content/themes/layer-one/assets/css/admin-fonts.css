@@ -1,9 +1,9 @@
 /*
  * Layer One fonts for everything outside the public site: wp-admin, the block editor (including its iframe),
- * the Customizer and the login screen. Same two families as the front end (Plus Jakarta Sans + Instrument Serif).
+ * the Customizer and the login screen. Same two families as the front end: Inter for text, Manrope for headings and buttons.
  * Icon fonts (dashicons, WooCommerce icons) are left alone.
  */
-:root{--lo-f:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--lo-serif:'Instrument Serif',Georgia,serif}
+:root{--lo-f:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--lo-head:'Manrope','Inter',system-ui,sans-serif;--lo-serif:var(--lo-head)}
 
 html,body,
 body.wp-admin,
@@ -68,5 +68,15 @@ body.login{background:#f5f7f7}
 .login h1 a{font-family:var(--lo-f)}
 .login #nav a,.login #backtoblog a{font-family:var(--lo-f)}
 
-/* italic accent used in headings on the site */
-.serif,.editor-styles-wrapper .serif{font-family:var(--lo-serif)!important;font-style:italic;font-weight:400}
+/* accent words in headings: heading font, upright */
+.serif,.editor-styles-wrapper .serif{font-family:var(--lo-head)!important;font-style:normal;font-weight:inherit}
+
+/* headings, buttons and the admin menu: Manrope */
+.wp-admin h1,.wp-admin h2,.wp-admin h3,.wp-admin .wp-heading-inline,
+.editor-styles-wrapper h1,.editor-styles-wrapper h2,.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,.editor-styles-wrapper h5,.editor-styles-wrapper h6,
+.editor-post-title__input,.customize-section-title h3,
+.wp-core-ui .button,.wp-core-ui .button-primary,.wp-core-ui .button-secondary,
+.components-button,#adminmenu .wp-menu-name,.login h1 a{
+  font-family:var(--lo-head)!important;
+}

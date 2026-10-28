@@ -11,6 +11,9 @@ function layerone_register_blocks() {
 	/* The landing page CSS from the design; loaded only on pages that use one of the blocks. */
 	wp_register_style( 'layerone-landing2', get_template_directory_uri() . '/assets/css/landing2.css', array( 'layerone-type' ), LAYERONE_VERSION );
 
+	/* Help and policy pages (FAQs, contact, privacy, terms) share the design's pages.css. */
+	wp_register_style( 'layerone-pages', get_template_directory_uri() . '/assets/css/pages.css', array( 'layerone-type' ), LAYERONE_VERSION );
+
 	/* Collectibles page styles from the design. */
 	wp_register_style( 'layerone-flexi', get_template_directory_uri() . '/assets/css/flexi.css', array( 'layerone-type' ), LAYERONE_VERSION );
 	wp_register_style( 'layerone-flexi2', get_template_directory_uri() . '/assets/css/flexi2.css', array( 'layerone-flexi' ), LAYERONE_VERSION );
@@ -27,7 +30,7 @@ function layerone_register_blocks() {
 		true
 	);
 
-	foreach ( array( 'hero', 'doors', 'categories', 'flexi', 'custom', 'steps', 'newsletter', 'flexi-hero', 'flexi-tabs', 'flexi-loved', 'flexi-bundles', 'flexi-all', 'flexi-box', 'flexi-how' ) as $block ) {
+	foreach ( array( 'hero', 'doors', 'categories', 'flexi', 'custom', 'steps', 'newsletter', 'flexi-hero', 'flexi-tabs', 'flexi-loved', 'flexi-bundles', 'flexi-all', 'flexi-box', 'flexi-how', 'faq', 'contact', 'legal' ) as $block ) {
 		register_block_type( get_template_directory() . '/blocks/' . $block );
 	}
 }

@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 /**
  * Site header: announcement bar, top bar, menu bar. Mobile drawer, tab bar and cart sheet are in footer.php.
  */

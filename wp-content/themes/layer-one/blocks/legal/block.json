@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "layerone/legal",
+	"title": "Policy page",
+	"category": "layer-one",
+	"icon": "media-text",
+	"description": "Privacy, terms and other policy pages. Write the text with the normal editor; every Heading 2 becomes a link in the “On this page” list.",
+	"keywords": [
+		"privacy",
+		"terms",
+		"policy",
+		"legal",
+		"layer one"
+	],
+	"textdomain": "layer-one",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": ""
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"updated": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": false
+	},
+	"editorScript": "file:./editor.js",
+	"viewScript": "file:./view.js",
+	"style": "layerone-pages",
+	"render": "file:./render.php"
+}

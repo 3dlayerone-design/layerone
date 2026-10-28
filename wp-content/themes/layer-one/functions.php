@@ -9,6 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* Asset version = newest file time in assets/ and blocks/, so edited scripts and styles are never served from the browser cache. */
 function layerone_assets_stamp() {
+	$cached = is_admin() ? false : get_transient( 'layerone_assets_stamp' );
+	if ( false !== $cached ) {
+		return (int) $cached;
+	}
 	$newest = 0;
 	foreach ( array( 'assets', 'blocks' ) as $dir ) {
 		$path = get_template_directory() . '/' . $dir;
@@ -22,7 +26,14 @@ function layerone_assets_stamp() {
 			}
 		}
 	}
+	if ( ! is_admin() ) {
+		set_transient( 'layerone_assets_stamp', $newest, 2 * MINUTE_IN_SECONDS );
+	}
 	return $newest;
+}
+/* Compress pages for visitors when the web server does not already do it (a web server that does will leave this alone). */
+if ( ! is_admin() && ! headers_sent() && extension_loaded( 'zlib' ) && ! ini_get( 'zlib.output_compression' ) && ( ! function_exists( 'apache_get_modules' ) || ! in_array( 'mod_deflate', apache_get_modules(), true ) ) ) {
+	@ini_set( 'zlib.output_compression', 'On' ); // phpcs:ignore WordPress.PHP.IniSet.Risky
 }
 define( 'LAYERONE_VERSION', '1.0.' . layerone_assets_stamp() );
 
@@ -30,6 +41,8 @@ require_once get_template_directory() . '/inc/class-flat-walker.php';
 require_once get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/cart.php';
 require_once get_template_directory() . '/inc/blocks.php';
+require_once get_template_directory() . '/inc/security.php';
+require_once get_template_directory() . '/inc/performance.php';
 require_once get_template_directory() . '/inc/newsletter.php';
 require_once get_template_directory() . '/inc/fonts.php';
 require_once get_template_directory() . '/inc/flexi/model.php';
@@ -75,6 +88,7 @@ function layerone_assets() {
 	wp_enqueue_style( 'layerone-green', $uri . '/css/green.css', array( 'layerone-motion' ), LAYERONE_VERSION );
 	wp_enqueue_style( 'layerone-type', $uri . '/css/type.css', array( 'layerone-green' ), LAYERONE_VERSION );
 	wp_enqueue_style( 'layerone-wp', $uri . '/css/wp.css', array( 'layerone-type' ), LAYERONE_VERSION );
+	wp_enqueue_style( 'layerone-typography', $uri . '/css/typography.css', array( 'layerone-wp' ), LAYERONE_VERSION );
 
 	/* Shop, category and search pages */
 	if ( function_exists( 'is_shop' ) && ( is_shop() || is_product_taxonomy() || is_search() ) ) {
@@ -115,6 +129,14 @@ function layerone_assets() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'layerone_assets' );
+
+/* The shipping policy is a section of the Terms page. */
+add_action( 'template_redirect', function () {
+	if ( is_page( 'shipping-policy' ) ) {
+		wp_safe_redirect( home_url( '/terms/#shipping' ), 301 );
+		exit;
+	}
+} );
 
 /* The design brings its own layout; skip WooCommerce's layout stylesheets. */
 add_filter( 'woocommerce_enqueue_styles', function ( $styles ) {
