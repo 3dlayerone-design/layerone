@@ -1,9 +1,9 @@
 /*
  * Layer One fonts for everything outside the public site: wp-admin, the block editor (including its iframe),
- * the Customizer and the login screen. Same two families as the front end: Inter for text, Manrope for headings and buttons.
+ * the Customizer and the login screen. Inter everywhere, the same font Shopify uses in its admin.
  * Icon fonts (dashicons, WooCommerce icons) are left alone.
  */
-:root{--lo-f:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--lo-head:'Manrope','Inter',system-ui,sans-serif;--lo-serif:var(--lo-head)}
+:root{--lo-f:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--lo-head:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--lo-serif:var(--lo-head)}
 
 html,body,
 body.wp-admin,
@@ -71,7 +71,7 @@ body.login{background:#f5f7f7}
 /* accent words in headings: heading font, upright */
 .serif,.editor-styles-wrapper .serif{font-family:var(--lo-head)!important;font-style:normal;font-weight:inherit}
 
-/* headings, buttons and the admin menu: Manrope */
+/* headings, buttons and the admin menu: Inter too */
 .wp-admin h1,.wp-admin h2,.wp-admin h3,.wp-admin .wp-heading-inline,
 .editor-styles-wrapper h1,.editor-styles-wrapper h2,.editor-styles-wrapper h3,
 .editor-styles-wrapper h4,.editor-styles-wrapper h5,.editor-styles-wrapper h6,
